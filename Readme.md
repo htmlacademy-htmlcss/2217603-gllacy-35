@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Маргарита Балахнина](https://up.htmlacademy.ru/htmlcss/35/user/2217603).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
