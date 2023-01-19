@@ -1,9 +1,137 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --extra-dark: #2d3440;
+  --dark: #565c66;
+  --neutral: #b9b9b9;
+  --light: #e7e7e7;
+  --extra-light: #fcfcfc;
+  --white: #ffffff;
+  --extra-bright: #ff2f64;
+  --bright: #ff4a78;
+  --special-neutral: #ff7799;
+  --special-light: #feafc3;
+  --special-extra-light: #ffcbd8;
+  --blue: #69a9ff;
+  --yellow: #fcc850;
+  --status-error: #ea5454;
+  --status-warning: #fd912e;
+  --status-success: #00e484;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.main-body {
+  min-width: 50vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: var(--special-light);
+  color: var(--dark);
+}
+
+.slide-2 .main-body {
+  background-color: var(--blue);
+}
+
+.slide-3 .main-body {
+  background-color: var(--yellow);
+}
+
+
+.main-container {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 
 
+.navigation-list {
+  /* display: flex; */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 
+.navigation-link {
+  display: flex;
+  align-items: center;
+  color: var(--extra-dark);
+  line-height: 20px;
+  text-decoration: none;
+}
 
+/*
+
+.navigation-item {
+  display: flex;
+  padding: 8px 16px;
+}
+
+.arrow-drop-down
+псевдоэлемент? дисплей нон?{
+
+  padding-right: calc(100% + 22px);
+  background-image: url("../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: top 16px right 19px;
+
+
+} */
 
 .basket-empty {
   display: none;

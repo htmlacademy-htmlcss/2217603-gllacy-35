@@ -17,10 +17,17 @@
         <img class="navigation-logo-img" src="images/logo.svg" width="137" height="56" alt="Логотип сайта Глейси.">
       </a>
       <nav class="navigation">
+        <!-- Чтобы сделать пункт меню выбранным - добавьте li класс "is-current" -->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="navigation-text">Каталог</span>
+              <svg class="arrow-drop-down" aria-hidden="true" focusable="false" width="12" height="6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.8.2a.67.67 0 1 0-.93.94L5.53 5.8a.66.66 0 0 0 .95 0l4.66-4.66A.67.67 0 1 0 10.2.2L6 4.39 1.8.19Z"
+                  fill="CurrentColor" />
+              </svg>
             </a>
           </li>
           <li class="navigation-item">
@@ -51,12 +58,12 @@
           </li>
           <li class="navigation-item log-in">
             <a class="navigation-link" href="#">
-              <!-- <svg class="navigation-icon" aria-hidden="true" focusable="false" width="14" height="12" fill="none"
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M.5 12h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3C10.5 1.6 8.9 0 7 0S3.5 1.6 3.5 3.5c0 1.3.7 2.4 1.7 3C2.6 7.2.7 9.4.5 12Z"
-                  fill="#000" />
-              </svg> -->
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 .67C8 .3 8.3 0 8.67 0h2.66a2 2 0 0 1 2 2v9.33a2 2 0 0 1-2 2H8.67a.67.67 0 1 1 0-1.33h2.66a.67.67 0 0 0 .67-.67V2a.67.67 0 0 0-.67-.67H8.67A.67.67 0 0 1 8 .67Zm-3.14 2.2a.67.67 0 0 1 .94 0l3.33 3.32a.67.67 0 0 1 .2.48.66.66 0 0 1-.2.47L5.8 10.47a.67.67 0 1 1-.94-.94l2.2-2.2H.66A.67.67 0 1 1 .67 6h6.4l-2.2-2.2a.67.67 0 0 1 0-.94Z"
+                  fill="CurrentColor" />
+              </svg>
               <span class="navigation-text">Вход</span>
             </a>
           </li>
@@ -65,13 +72,12 @@
               <span class="visually-hidden">В корзине</span>
               <span class="basket-count">2 товара</span>
               <span class="basket-empty">Пусто</span>
-              <!-- <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="14" fill="none"
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="15" height="14" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"
-                  fill="#000" />
-              </svg> -->
-
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"
+                  fill="CurrentColor" />
+              </svg>
             </a>
           </li>
         </ul>
@@ -79,7 +85,7 @@
 
     </header>
 
-    <main class="main-index">
+    <main class="main-index main-container">
 
     </main>
 
@@ -88,4 +94,5 @@
     </footer>
 
   </body>
+
 </html>
