@@ -76,7 +76,6 @@ body {
   background-color: var(--yellow);
 }
 
-
 .main-container {
   flex-grow: 1;
 }
@@ -97,15 +96,69 @@ img {
   overflow: hidden;
 }
 
-
-
-.navigation-list {
-  /* display: flex; */
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
+/* Buttons */
+
+
+/* Header */
+/* .main-header {
+  min-height: 104px;
+} */
+
+.main-header .container {
+  padding: 24px 0;
+  display: flex;
+}
+
+.navigation-logo {
+  display: inline-block;
+  margin: 0;
+  margin-right: 16px;
+}
+
+.navigation-logo-img {
+  color: var(--extra-dark);
+}
+
+.navigation-logo-img:hover {
+  color: var(--extra-light);
+  opacity: 0.5;
+  transition: 100ms;
+}
+
+.navigation-logo-img:active {
+  color: var(--extra-light);
+  opacity: 1;
+  transition: 100ms;
+}
+
+.navigation-logo:focus {
+  box-shadow: 0 0 0 2px var(--extra-light), 0 0 0 4px var(--extra-dark);
+  border-radius: 30px;
+  outline: none;
+  transition: 100ms;
+}
+
+.navigation {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navigation-list {
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  align-items: center;
+}
 
 .navigation-link {
   display: flex;
@@ -113,7 +166,45 @@ img {
   color: var(--extra-dark);
   line-height: 20px;
   text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 30px;
 }
+
+.arrow-drop-down {
+  margin-left: 6px;
+  padding: 6px 2px 4px;
+}
+
+.navigation-link:hover {
+  background-color: rgb(252 252 252 / 0.5);
+  transition: 100ms;
+}
+
+.navigation-link:active {
+  background-color: var(--extra-light);
+  transition: 100ms;
+}
+
+.navigation-link:focus {
+  background-color: rgb(252 252 252 / 0.5);
+  outline: 2px solid var(--extra-dark);
+  transition: 100ms;
+}
+
+.is-current .navigation-link {
+  color: var(--extra-light);
+  background-color: var(--bright);
+}
+
+.is-current .navigation-link:hover {
+  opacity: 0.6;
+}
+
+.is-current .navigation-link:active {
+  opacity: 0.3;
+}
+
+
 
 /*
 
