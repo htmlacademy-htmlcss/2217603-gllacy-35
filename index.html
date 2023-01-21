@@ -11,9 +11,9 @@
 
   <body class="main-body">
     <h1 class="visually-hidden">Магазин мороженого Глейси.</h1>
+    <div class="container">
 
-    <header class="main-header">
-      <div class="container">
+      <header class="main-header">
         <a class="navigation-logo" href="index.html">
           <svg class="navigation-logo-img" role="img" aria-label="Логотип сайта Глейси." width="137" height="56"
             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@
         <nav class="navigation">
           <!-- Чтобы сделать пункт меню выбранным - добавьте li класс "is-current" -->
           <ul class="navigation-list">
-            <li class="navigation-item">
+            <li class="navigation-item category">
               <a class="navigation-link" href="#">
                 <span class="navigation-text">Каталог</span>
                 <svg class="arrow-drop-down" aria-hidden="true" focusable="false" width="16" height="16" fill="none"
@@ -44,6 +44,27 @@
                     fill="CurrentColor" />
                 </svg>
               </a>
+              <div class="popover popover-category">
+                <div class="popover-content category-content">
+                  <h2 class="visually-hidden">Категории каталога.</h2>
+                  <!-- Чтобы сделать пункт каталога выбранным - добавьте li класс "is-current" -->
+                  <a class="category-link novelty-link" href="#">Новинки</a>
+                  <ul class="category-list">
+                    <li class="category-item">
+                      <a class="category-link" href="catalog.html">Сливочное</a>
+                    </li>
+                    <li class="category-item">
+                      <a class="category-link" href="#">Щербеты</a>
+                    </li>
+                    <li class="category-item">
+                      <a class="category-link" href="#">Фруктовый&nbsp;лед</a>
+                    </li>
+                    <li class="category-item">
+                      <a class="category-link" href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">
@@ -62,7 +83,7 @@
                 <a class="navigation-address-phone" href="tel:+78005558628">+7 800 555-86-28</a>
               </address>
             </li>
-            <li class="navigation-item navigation-user-item">
+            <li class="navigation-item navigation-user-item search">
               <a class="navigation-link navigation-user-link navigation-search" href="#">
                 <svg class="navigation-icon-search" aria-hidden="true" focusable="false" width="14" height="14"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,17 +91,32 @@
                     d="M1.66 6.33a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.45a.67.67 0 1 1-.94.94l-2.45-2.45Z"
                     fill="CurrentColor" />
                 </svg>
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск.</span>
               </a>
-              <!--ПОПОВЕР?<form class="header-search-form" action="https://echo.htmlacademy.ru/courses" method="get">
-                 <label class="header-search-label">
-                <input class="header-search-field" type="text" name="header-search" placeholder="Поиск по сайту">
-                <span class="visually-hidden">Поиск по сайту.</span>
-              </label>
-              <button class="header-search-button" type="submit">Найти</button>
-              </form>-->
+              <div class="popover popover-search">
+                <div class="popover-content search-content">
+                  <h2 class="visually-hidden">Форма поиска.</h2>
+                  <!-- При введении текста в поле формы - дать form класс "is-active" -->
+                  <form class="header-search-form" action="https://echo.htmlacademy.ru/courses" method="get">
+                    <label class="header-search-label">
+                      <input class="header-search-field field" type="text" name="header-search"
+                        placeholder="Поиск по сайту">
+                      <span class="visually-hidden">Поиск по сайту.</span>
+                    </label>
+                    <button class="button button-reset" type="reset">
+                      <svg class="button-reset-icon" aria-hidden="true" focusable="false" width="10" height="10"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.8 1.14A.67.67 0 1 0 8.86.2L5 4.06 1.14.2a.67.67 0 1 0-.94.94L4.06 5 .2 8.86a.67.67 0 0 0 .94.94L5 5.94 8.86 9.8a.67.67 0 1 0 .94-.94L5.94 5 9.8 1.14Z"
+                          fill="#2D3440" />
+                      </svg>
+                      <span class="visually-hidden">Сбросить</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
             </li>
-            <li class="navigation-item navigation-user-item">
+            <li class="navigation-item navigation-user-item auth">
               <a class="navigation-link navigation-user-link" href="#">
                 <svg class="navigation-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -90,6 +126,30 @@
                 </svg>
                 <span class="navigation-text">Вход</span>
               </a>
+              <div class="popover popover-auth">
+                <div class="popover-content">
+                  <h2 class="popover-title">Личный кабинет</h2>
+                  <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <p class="field-group">
+                      <label class="visually-hidden" for="auth-login">Логин</label>
+                      <input class="auth-form-field field" type="text" id="auth-login" name="auth-login"
+                        placeholder="Введите email" value="email@example.com">
+                    </p>
+                    <p class="field-group">
+                      <label class="visually-hidden" for="auth-password">Пароль</label>
+                      <input class="auth-form-field field" type="password" id="auth-password" name="auth-password"
+                        placeholder="Введите пароль" value="qwertY">
+                    </p>
+                  </form>
+                  <div class="popover-line">
+                    <a class="auth-button button button-bright" href="#">Войти</a>
+                    <div class="auth-link-wrapper">
+                      <a class="auth-link auth-recovery" href="#">Забыли пароль?</a>
+                      <a class="auth-link" href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="navigation-item navigation-user-item basket">
               <a class="navigation-link navigation-user-link" href="#" title="Нажмите, чтобы открыть">
@@ -114,7 +174,8 @@
                         <div class="basket-item-wrapper">
                           <h3 class="basket-item-title" href="#">Малинка</h3>
                           <p class="basket-item-amount">
-                            <span class="basket-item-weight">1</span> кг х <span class="basket-item-price">310</span> ₽
+                            <span class="basket-item-weight">1</span> кг х <span class="basket-item-price">310</span>
+                            ₽
                           </p>
                         </div>
                       </a>
@@ -152,7 +213,7 @@
                       </button>
                     </li>
                   </ul>
-                  <div class="basket-line">
+                  <div class="popover-line">
                     <a class="basket-order-button button button-bright" href="#">Оформить заказ</a>
                     <p class="basket-total">Итого: <span class="basket-total-price">790</span> ₽</p>
                   </div>
@@ -161,26 +222,106 @@
             </li>
           </ul>
         </nav>
+      </header>
 
-      </div>
-    </header>
+      <main class="main-index main-container">
 
-    <main class="main-index main-container">
-      <ul>
-        <li><button class="button button-basic">Basic</button></li>
-        <li>gggggggg</li>
-        <li>gggggggg</li>
-        <li><button class="button button-bright">bright</button></li>
-        <li>gggggggg</li>
-        <li>gggggggg</li>
-        <li><button class="button button-reverse">reverse</button></li>
-      </ul>
-    </main>
+        <section class="slider">
+          <h2 class="visually-hidden">Главный слайдер.</h2>
+          <div class="slider-wrapper">
+            <div class="slider-controls">
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Предыдущее фото.</span>
+              </button>
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Следующее фото.</span>
+              </button>
+            </div>
+          </div>
+<!--
+          <ul class="slider-list">
+            <li class="slider-item slider-item-current">
+              <span class="slide-number">01</span>
+              <img class="slider-image" src="images/slider/slider-1.png" width="560" height="560"
+                alt="Чёрно-белый лазерный квадракоптер.">
+              <div class="slider-text-column">
+                <h3 class="slider-title main-title">Порхает как бабочка, жалит как пчела!</h3>
+                <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+                  замаскированным под стандартную камеру.
+                </p>
+                <a class="button button-basic button-more" href="#"><span class="button-text">Подробнее</span></a>
+                <dl class="feature-list short-gap">
+                  <dt class="feature-term">Дальность полета</dt>
+                  <dd class="feature-definition">800 м</dd>
+                  <dt class="feature-term">Радиус поражения</dt>
+                  <dd class="feature-definition">50 м</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="slider-item">
+              <span class="slide-number">02</span>
+              <img class="slider-image" src="images/slider/slider-2.png" width="560" height="560"
+                alt="Чёрный фитнес-браслет с надписью на экране:'Я вижу, что ты снова ешь'.">
+              <div class="slider-text-column">
+                <h3 class="slider-title main-title">Худеем <br>правильно!</h3>
+                <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+                  занятия и соблюдать диету.
+                </p>
+                <a class="button button-basic button-more" href="#"><span class="button-text">Подробнее</span></a>
+                <dl class="feature-list">
+                  <dt class="feature-term">Без подзарядки</dt>
+                  <dd class="feature-definition">48 часов</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="slider-item">
+              <span class="slide-number">03</span>
+              <img class="slider-image" src="images/slider/slider-3.png" width="560" height="560"
+                alt="Три чёрных палки для селфи, сложенные по-разному.">
+              <div class="slider-text-column">
+                <h3 class="slider-title main-title">Делай селфи,<br> как Бен Стиллер! </h3>
+                <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
+                  Карл!) метров длиной и весом всего 5 кг.
+                </p>
+                <a class="button button-basic button-more" href="#"><span class="button-text">Подробнее</span></a>
+                <dl class="feature-list long-gap">
+                  <dt class="feature-term">Длина палки</dt>
+                  <dd class="feature-definition">8,5 м</dd>
+                  <dt class="feature-term">Вес палки</dt>
+                  <dd class="feature-definition">5 кг</dd>
+                  <dt class="feature-term">Материал</dt>
+                  <dd class="feature-definition">Карбон</dd>
+                </dl>
+              </div>
+            </li>
+          </ul> -->
 
-    <footer class="main-footer">
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">1 слайд.</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">2 слайд.</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">3 слайд.</span>
+              </button>
+            </li>
+          </ol>
+        </section>
 
-    </footer>
+      </main>
 
+      <footer class="main-footer">
+
+      </footer>
+
+    </div>
   </body>
 
 </html>
