@@ -215,6 +215,7 @@ img {
   outline: 4px solid rgb(252 252 252 / 0.4);
   box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
   transition: all ease-out 0.2s;
+  outline-offset: 0;
 }
 
 .button:hover {
@@ -250,13 +251,13 @@ img {
   background-repeat: no-repeat;
 }
 
-.button-bright.spinning {
+.button-bright.spinning:not(:hover) {
   background-image: url("../images/icons/spinner-white.svg");
 }
 
 .button-bright {
   color: var(--extra-light);
-  background-color: var(--bright);
+  background-color: var(--extra-bright);
   outline: 4px solid rgb(255 47 100 / 0.3);
   box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
 }
@@ -1040,7 +1041,7 @@ img {
   margin: 0;
   padding: 0;
   background-color: rgb(252 252 252 / 0.3);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 50%;
   cursor: pointer;
   transition: all ease-out 0.2s;
@@ -1177,4 +1178,181 @@ img {
   margin-bottom: 28px;
   color: var(--extra-dark);
   max-width: 330px;
+}
+
+/* Popular-product */
+.popular-product {
+  margin-bottom: 80px;
+}
+
+.popular-product-title {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto 56px;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+}
+
+.product-card {
+  position: relative;
+  max-width: 270px;
+  min-height: 281px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 24px;
+  transition: all ease-out 0.2s;
+  border-radius: 8px;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 51px);
+  background-color: var(--extra-light);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.product-card-image {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+}
+
+.product-card-content {
+  margin-bottom: 16px;
+}
+
+.product-card-title {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.product-card-caption {
+  margin: 0;
+  text-align: center;
+}
+
+.product-card-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card-price {
+  margin: 0;
+}
+
+.product-card-button {
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  padding-left: 6px;
+  outline: none;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+}
+
+.product-card-button:hover {
+  outline: none;
+  border-color: var(--extra-bright);
+}
+
+.product-card-button:active {
+  outline: none;
+  background-color: var(--special-extra-light);
+  border-color: var(--extra-bright);
+}
+
+.product-card-button:active .product-card-button-icon {
+  color: var(--extra-dark);
+}
+
+.product-card-button:focus-visible {
+  outline: none;
+  border-color: var(--extra-dark);
+}
+
+.product-card-button:disabled {
+  outline: none;
+}
+
+.product-card:focus-within {
+  box-shadow: 0 0 5px 5px var(--extra-light);
+}
+
+/* Info-block */
+.info-block {
+  padding: 24px;
+  margin-bottom: 80px;
+  border-radius: 16px;
+  background-image: url("/images/pattern/pattern-waffle.png");
+  background-size: 10%;
+
+}
+
+.info-block-wrapper {
+  padding: 56px 40px;
+  background-color: var(--white);
+  border-radius: 16px;
+}
+
+.info-title {
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto 56px;
+}
+
+.info-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 32px;
+}
+
+.info-item {
+  position: relative;
+  display: flex;
+}
+
+.info-item::before {
+  content: "";
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--extra-dark);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  margin-right: 15px;
+}
+
+.info-item-ice-cream::before {
+  background-image: url("../images/pins/ice-cream.svg");
+}
+
+.info-text {
+  margin: 0;
+  max-width: 442px;
 }
