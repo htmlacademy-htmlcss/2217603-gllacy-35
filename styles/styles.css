@@ -1456,6 +1456,9 @@ img {
   background-color: var(--white);
   border-radius: 16px;
   padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .subscribe-text {
@@ -1471,4 +1474,89 @@ img {
 
 .subscribe-field {
   width: 330px;
+}
+
+/* Delivery */
+.delivery {
+  position: relative;
+  width: 100%;
+  min-height: 534px;
+  background-color: var(--white);
+  background-image: url("../images/background/bg-delivery.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  margin-bottom: 80px;
+  padding: 100px;
+  display: flex;
+}
+
+.delivery-text-wrapper {
+  max-width: 375px;
+  margin: auto 0;
+}
+
+.delivery-title {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.delivery-text {
+  margin: 0;
+}
+
+.delivery-form-wrapper {
+  position: absolute;
+  top: 64px;
+  right: 64px;
+  background-color: var(--extra-light);
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  width: 500px;
+  height: 406px;
+  padding: 40px 40px 42px;
+}
+
+.delivery-info {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-form-line {
+  display: flex;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: var(--extra-dark);
+  margin-bottom: 8px;
+}
+
+.delivery-form-date {
+  max-width: 117px;
+  margin-right: 16px;
+}
+
+.delivery-form-phone {
+  flex-grow: 1;
+}
+
+.delivery-form-address {
+  margin-bottom: 32px;
+}
+
+
+.delivery-button {
+  align-self: center;
 }
