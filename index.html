@@ -145,12 +145,12 @@
                 <div class="popover-content">
                   <h2 class="popover-title headline-3">Личный кабинет</h2>
                   <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-                    <p class="field-group">
+                    <p class="field-group-auth">
                       <label class="visually-hidden" for="auth-login">Логин</label>
                       <input class="auth-form-field field" type="text" id="auth-login" name="auth-login"
                         placeholder="Введите email" value="email@example.com">
                     </p>
-                    <p class="field-group">
+                    <p class="field-group-auth">
                       <label class="visually-hidden" for="auth-password">Пароль</label>
                       <input class="auth-form-field field" type="password" id="auth-password" name="auth-password"
                         placeholder="Введите пароль" value="qwertY">
@@ -202,12 +202,6 @@
                       </a>
                       <span class="basket-item-sum headline-5">310 ₽</span>
                       <button class="basket-item-button" type="button">
-                        <svg class="basket-item-button-icon" aria-hidden="true" focusable="false" width="10" height="10"
-                          fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M9.8 1.14A.67.67 0 1 0 8.86.2L5 4.06 1.14.2a.67.67 0 1 0-.94.94L4.06 5 .2 8.86a.67.67 0 0 0 .94.94L5 5.94 8.86 9.8a.67.67 0 1 0 .94-.94L5.94 5 9.8 1.14Z"
-                            fill="CurrentColor" />
-                        </svg>
                         <span class="visually-hidden">Удалить из корзины.</span>
                       </button>
                     </li>
@@ -224,11 +218,6 @@
                       </a>
                       <span class="basket-item-sum headline-5">480 ₽</span>
                       <button class="basket-item-button" type="button">
-                        <svg class="basket-item-button-icon" aria-hidden="true" focusable="false" width="10" height="10"
-                          fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M9.8 1.14A.67.67 0 1 0 8.86.2L5 4.06 1.14.2a.67.67 0 1 0-.94.94L4.06 5 .2 8.86a.67.67 0 0 0 .94.94L5 5.94 8.86 9.8a.67.67 0 1 0 .94-.94L5.94 5 9.8 1.14Z"
-                            fill="CurrentColor" />
                         </svg>
                         <span class="visually-hidden">Удалить из корзины.</span>
                       </button>
@@ -420,7 +409,7 @@
               </div>
               <div class="product-card-line">
                 <p class="product-card-price headline-4">310 ₽/кг</p>
-                <button class="product-card-button button button-bright">
+                <button class="product-card-button button button-bright" type="button">
                   <svg class="product-card-button-icon" aria-hidden="true" focusable="false" width="15" height="14"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -442,7 +431,7 @@
               </div>
               <div class="product-card-line">
                 <p class="product-card-price headline-4">340 ₽/кг</p>
-                <button class="product-card-button button button-bright">
+                <button class="product-card-button button button-bright" type="button">
                   <svg class="product-card-button-icon" aria-hidden="true" focusable="false" width="15" height="14"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -464,7 +453,7 @@
               </div>
               <div class="product-card-line">
                 <p class="product-card-price headline-4">330 ₽/кг</p>
-                <button class="product-card-button button button-bright">
+                <button class="product-card-button button button-bright" type="button">
                   <svg class="product-card-button-icon" aria-hidden="true" focusable="false" width="15" height="14"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -486,7 +475,7 @@
               </div>
               <div class="product-card-line">
                 <p class="product-card-price headline-4">320 ₽/кг</p>
-                <button class="product-card-button button button-bright">
+                <button class="product-card-button button button-bright" type="button">
                   <svg class="product-card-button-icon" aria-hidden="true" focusable="false" width="15" height="14"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -566,7 +555,7 @@
             </p>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="delivery-form-line">
-                <p class="field-group delivery-form-date">
+                <p class="field-group-delivery delivery-form-date">
                   <span class="tooltip-wrapper">
                     <label class="form-label paragraph-3-bold" for="delivery-date">
                       Дата
@@ -586,7 +575,7 @@
                   <input class="field paragraph-3" type="text" id="delivery-date" name="delivery-date"
                     placeholder="01.04.2020">
                 </p>
-                <p class="field-group delivery-form-phone">
+                <p class="field-group-delivery delivery-form-phone">
                   <label class="form-label paragraph-3-bold" for="delivery-phone">
                     Телефон
                   </label>
@@ -594,7 +583,7 @@
                     placeholder="+7 800 999-00-00">
                 </p>
               </div>
-              <p class="field-group delivery-form-address">
+              <p class="field-group-delivery delivery-form-address">
                 <span class="tooltip-wrapper">
                   <label class="form-label paragraph-3-bold" for="delivery-address">
                     Адрес
@@ -712,14 +701,43 @@
             </svg>
             <span class="visually-hidden">Ссылка на htmlacademy.</span>
           </a>
-          <p class="footer-html-info caption-2">Сделано в <a class="html-info-link"
-              href="https://htmlacademy.ru/">.html academy</a> © 2021
-            </p>
+          <p class="footer-html-info caption-2">
+            Сделано в <a class="html-info-link" href="https://htmlacademy.ru/">.html academy</a> © 2021
+          </p>
         </section>
-
       </footer>
-
     </div>
+
+    <!-- Для открытия модального окна добавить класс "modal-container-open" -->
+    <div class="modal-container">
+      <div class="modal modal-feedback">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть модальное окно.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title headline-3">Мы обязательно ответим вам!</h2>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group-feedback">
+              <label class="visually-hidden" for="feedback-name">Введите имя и фамилию.</label>
+              <input class="feedback-form-field field" type="text" id="feedback-name" name="feedback-name"
+                placeholder="Имя и фамилия">
+            </p>
+            <p class="field-group-feedback">
+              <label class="visually-hidden" for="feedback-email">Введите ваш e-mail.</label>
+              <input class="feedback-form-field field" type="text" id="feedback-email" name="feedback-email"
+                placeholder="email@example.com">
+            </p>
+            <p class="field-group-feedback">
+              <label class="visually-hidden" for="feedback-comment">Пишите всё, что пожелаете.</label>
+              <textarea class="feedback-form-textarea field" id="feedback-comment" name="feedback-comment" rows="6"
+                placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button button-bright feedback-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 
 </html>

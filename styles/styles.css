@@ -579,18 +579,14 @@ img {
   border-radius: 50%;
   padding: 3px;
   cursor: pointer;
+  background-image: url("../images/icons/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   transition: all ease-out 0.2s;
-}
-
-.basket-item-button-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
 }
 
 .basket-item-button:hover {
@@ -690,7 +686,7 @@ img {
   color: var(--extra-dark);
 }
 
-.field-group {
+.field-group-auth {
   margin: 0;
   margin-bottom: 16px;
 }
@@ -1535,7 +1531,7 @@ img {
   display: flex;
 }
 
-.field-group {
+.field-group-delivery {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -1615,7 +1611,7 @@ img {
 }
 
 .tooltip-toggle:focus-visible {
-  outline: 2px solid var(--extra-dark);
+  outline: 2px solid var(--bright);
 }
 
 .tooltip-text {
@@ -1832,3 +1828,96 @@ img {
 }
 
 /* Modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(45 52 64 / 0.3);
+  z-index: 1;
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px;
+  background-color: var(--extra-light);
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+}
+
+.modal-feedback {
+  width: 570px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 21px;
+  right: 21px;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../images/icons/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+
+.modal-close-button:hover {
+  background-color: var(--special-extra-light);
+}
+
+.modal-close-button:active {
+  background-color: var(--special-neutral);
+}
+
+.modal-close-button:focus {
+  background-color: rgb(252 252 252 / 0.5);
+  outline: 2px solid var(--extra-dark);
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group-feedback {
+  margin: 0;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.field-group-feedback:last-of-type {
+  margin-bottom: 32px;
+}
+
+.feedback-form-field {
+  width: 100%;
+}
+
+.feedback-form-textarea {
+  width: 100%;
+  max-height: 151px;
+}
+
+.feedback-button {
+  align-self: flex-end;
+  margin-right: -2px;
+  margin-bottom: 2px;
+}
+
+.modal-container-open {
+  display: flex;
+}
