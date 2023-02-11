@@ -1534,6 +1534,7 @@ img {
 .field-group-delivery {
   display: flex;
   flex-direction: column;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -1920,4 +1921,9 @@ img {
 
 .modal-container-open {
   display: flex;
+}
+
+/* Catalog-page */
+.main-catalog {
+  padding: 32px 0 40px;
 }
