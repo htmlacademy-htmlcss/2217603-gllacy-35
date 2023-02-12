@@ -1923,7 +1923,343 @@ img {
   display: flex;
 }
 
-/* Catalog-page */
-.main-catalog {
-  padding: 32px 0 40px;
+/* Catalog-breadcrumbs */
+.inner-header {
+  padding-top: 32px;
+  margin-bottom: 44px;
+}
+
+.breadcrumbs-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-link {
+  color: var(--extra-dark);
+  text-decoration: none;
+  outline-offset: 2px;
+  transition: all ease-out 0.2s;
+  display: flex;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icons/chevrons-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link:hover {
+  color: var(--light);
+}
+
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link:active {
+  color: var(--extra-light);
+}
+
+.breadcrumbs-item:not(:last-child) .breadcrumbs-link:focus-visible {
+  outline: 2px solid var(--extra-dark);
+}
+
+.is-current .breadcrumbs-link {
+  border-bottom: 1px solid var(--extra-dark);
+}
+
+.catalog-main-title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+/* Catalog-filter */
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--extra-dark);
+}
+
+.catalog-filter-group {
+  padding: 0;
+  margin: 0;
+  margin-right: 24px;
+  border: none;
+}
+
+.catalog-filter-group:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.filter-group-title {
+  margin-bottom: 8px;
+  margin-left: 16px;
+  padding: 0;
+}
+
+.select {
+  background-color: rgb(252 252 252 / 0.3);
+  padding: 6px 14px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 196px;
+  background-image: url("../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: top 8px right 11px;
+  transition: all ease-out 0.2s;
+}
+
+.select-control {
+  width: 100%;
+  padding-right: 32px;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+.select:hover {
+  background-color: rgb(252 252 252 / 0.5);
+}
+
+.select:active {
+  background-color: var(--extra-light);
+}
+
+.select:focus-within {
+  background-color: rgb(252 252 252 / 0.4);
+  border-color: var(--extra-light);
+}
+
+.select-control:focus {
+  outline: none;
+}
+
+.select-control:disabled {
+  opacity: 0.1;
+}
+
+.range-wrapper {
+  display: flex;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+
+}
+
+.range-input {
+  width: 100%;
+  max-width: 30px;
+  max-height: 20px;
+  padding: 0;
+  margin-left: 5px;
+  font: inherit;
+  text-align: start;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+  color: var(--extra-dark);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-label {
+  display: flex;
+}
+
+.range-input:focus {
+  outline: 2px solid var(--extra-dark);
+}
+
+.range {
+  position: relative;
+  width: 196px;
+  min-height: 36px;
+  background-color: rgb(252 252 252 / 0.3);
+  border-radius: 20px;
+}
+
+.range-scale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 164px;
+  height: 2px;
+  background-color: rgb(86 92 102 / 0.3);
+  border-radius: 20px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: var(--dark);
+}
+
+.range-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: var(--extra-dark);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: all ease-out 0.2s;
+}
+
+.toggle-min {
+  left: -16px;
+}
+
+.toggle-max {
+  right: -16px;
+}
+
+.range-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--extra-light);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.range-toggle:hover {
+  background-color: var(--extra-light);
+}
+
+.range-toggle:hover::after {
+  background-color: var(--extra-dark);
+}
+
+.range-toggle:active,
+.range-toggle:active::after {
+  background-color: var(--extra-dark);
+}
+
+.range-toggle:focus-visible {
+  background-color: var(--extra-light);
+  outline: 2px solid var(--extra-dark);
+}
+
+.range-toggle:focus-visible::after {
+  background-color: var(--extra-dark);
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 8px 24px;
+  list-style-type: none;
+  background: rgb(252 252 252 / 0.3);
+  border-radius: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.catalog-filter-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 155px;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 24px;
+  cursor: pointer;
+  transition: all ease-out 0.2s;
+}
+
+.control-mark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 1.33px solid var(--extra-dark);
+  border-radius: 2px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--extra-dark);
+  border-radius: 50%;
+}
+
+.control-mark-check-icon {
+  display: none;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  border-color: transparent;
+}
+
+.control-input[type="checkbox"]:checked .control-mark-check-icon {
+  display: block;
+}
+
+/**/
+.fillers-list {
+  padding: 10px 24px;
+}
+
+/**/
+.button-filter {
+  align-self: flex-end;
+  width: 185px;
 }
