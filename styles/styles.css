@@ -2223,6 +2223,7 @@ img {
   background-color: transparent;
   border: 1.33px solid var(--extra-dark);
   border-radius: 2px;
+  transition: all ease-out 0.2s;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -2239,26 +2240,69 @@ img {
   height: 6px;
   background-color: var(--extra-dark);
   border-radius: 50%;
+  transition: all ease-out 0.2s;
 }
 
 .control-mark-check-icon {
   display: none;
+  transition: all ease-out 0.2s;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
-  border-color: transparent;
-}
-
-.control-input[type="checkbox"]:checked .control-mark-check-icon {
+.control-input[type="checkbox"]:checked + .control-mark .control-mark-check-icon {
   display: block;
 }
 
-/**/
+.control-input[type="checkbox"]:checked + .control-mark {
+  border: none;
+}
+
+.control:hover {
+  color: var(--extra-light);
+}
+
+.control:hover .control-mark {
+  border-color: var(--extra-light);
+}
+
+.control-input[type="radio"]:checked:hover + .control-mark::before {
+  background-color: var(--extra-light);
+}
+
+.control-input[type="checkbox"]:checked:hover + .control-mark .control-mark-check-icon {
+  color: var(--extra-light);
+}
+
+.control:active {
+  opacity: 0.6;
+}
+
+.control:disabled .control-mark {
+  border-color: var(--extra-dark);
+  opacity: 0.5;
+}
+
+.control-mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 2px solid var(--extra-dark);
+  width: 24px;
+  height: 24px;
+  display: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.control:focus-within .control-mark::after {
+  display: block;
+}
+
 .fillers-list {
   padding: 10px 24px;
 }
 
-/**/
 .button-filter {
   align-self: flex-end;
   width: 185px;
