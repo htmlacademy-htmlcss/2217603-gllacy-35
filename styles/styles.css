@@ -525,9 +525,9 @@ img {
 
 .basket-item {
   min-width: 345px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 178px 55px 16px;
+  column-gap: 48px;
   align-items: center;
 }
 
@@ -573,13 +573,13 @@ img {
 }
 
 .basket-item-button {
-  width: 30px;
-  height: 30px;
+  width: 16px;
+  height: 16px;
   background-color: transparent;
   color: var(--extra-dark);
   border: none;
-  border-radius: 50%;
-  padding: 3px;
+
+  padding: 0;
   cursor: pointer;
   background-image: url("../images/icons/close.svg");
   background-repeat: no-repeat;
@@ -591,23 +591,45 @@ img {
   transition: all ease-out 0.2s;
 }
 
-.basket-item-button:hover {
+.basket-item-button::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  cursor: pointer;
+  z-index: -1;
+  transition: all ease-out 0.2s;
+  border-radius: 50%;
+}
+
+.basket-item-button:hover::before {
   background-color: var(--special-extra-light);
 }
 
-.basket-item-button:active {
+.basket-item-button:active::before {
   background-color: var(--special-neutral);
 }
 
 .basket-item-button:focus-visible {
+  outline: none;
+}
+
+.basket-item-button:focus-visible::before {
   background-color: rgb(252 252 252 / 0.5);
   outline: 2px solid var(--extra-dark);
 }
 
 .popover-line {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+}
+
+.basket-order-button {
+  margin-right: 32px;
 }
 
 .basket-total {
@@ -873,7 +895,7 @@ img {
   outline: none;
 }
 
-.is-current .category-link {
+.is-active .category-link {
   background-color: var(--bright);
   color: var(--extra-light);
   cursor: default;
@@ -1768,7 +1790,7 @@ img {
 
 .footer-menu {
   max-width: 400px;
-  margin-left: 120px;
+  margin-left: 140px;
 }
 
 .footer-menu-list {
@@ -1825,6 +1847,7 @@ img {
 
 .footer-html {
   min-width: 193px;
+  margin-left: 20px;
 }
 
 .htmlacademy-link {
@@ -1966,7 +1989,7 @@ img {
   margin-bottom: 2px;
 }
 
-.modal-container-open {
+.modal-open {
   display: flex;
 }
 
@@ -2260,8 +2283,6 @@ img {
   transition: all ease-out 0.2s;
   width: 100%;
   max-width: 155px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .control-mark {
@@ -2275,6 +2296,14 @@ img {
   border: 1.33px solid var(--extra-dark);
   border-radius: 2px;
   transition: all ease-out 0.2s;
+}
+
+.control-label {
+  width: 100%;
+  max-width: 155px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -2357,6 +2386,7 @@ img {
 .button-filter {
   align-self: flex-end;
   min-width: 185px;
+  margin-top: 10px;
   margin-bottom: 2px;
 }
 

@@ -51,7 +51,7 @@
               <div class="popover popover-category">
                 <div class="popover-content category-content">
                   <h2 class="visually-hidden">Категории каталога.</h2>
-                  <!-- Чтобы сделать пункт каталога выбранным - добавьте li класс "is-current" -->
+                  <!-- Чтобы сделать пункт каталога выбранным - добавьте li класс "is-active" -->
                   <a class="category-link novelty-link caption-bold" href="#">
                     <span class="category-link-text">Новинки</span>
                   </a>
@@ -240,6 +240,7 @@
         <section class="slider">
           <h2 class="visually-hidden">Главный слайдер.</h2>
 
+          <!-- Чтобы сделать пункт слайдера выбранным - добавьте li класс "slider-item-current"  -->
           <ul class="slider-list">
             <li class="slider-item slider-item-current">
               <div class="slider-text-column">
@@ -261,8 +262,7 @@
               <div class="slider-text-column">
                 <h3 class="slider-title headline-1">Сливочное мороженое со вкусом банана</h3>
                 <p class="slider-description paragraph-1">Сливочное мороженое с ярким банановым вкусом подарит вам
-                  свежесть и
-                  наслаждение даже в самый жаркий летний день.
+                  свежесть и наслаждение даже в самый жаркий летний день.
                 </p>
                 <a class="button-order button" href="#">
                   <span class="button-text">Заказать</span>
@@ -275,10 +275,9 @@
             </li>
             <li class="slider-item">
               <div class="slider-text-column">
-                <h3 class="slider-title headline-1">Карамельный пломбир с маршмеллоу</h3>
+                <h3 class="slider-title headline-1">Карамельный пломбир с&nbsp;маршмеллоу</h3>
                 <p class="slider-description paragraph-1">Необычный сладкий десерт с карамельным топпингом и кусочками
-                  зефира
-                  завоюет сердца сладкоежек всех возрастов.
+                  зефира завоюет <br>сердца сладкоежек всех возрастов.
                 </p>
                 <a class="button-order button" href="#">
                   <span class="button-text">Заказать</span>
@@ -313,6 +312,7 @@
           </div>
 
           <div class="slider-footer">
+            <!-- Чтобы сделать пункт пагинации слайдера выбранным - добавьте button класс "slider-pagination-button-current"  -->
             <ol class="slider-pagination">
               <li class="slider-pagination-item">
                 <button class="slider-pagination-button slider-pagination-button-current" type="button">
@@ -708,7 +708,7 @@
       </footer>
     </div>
 
-    <!-- Для открытия модального окна добавить класс "modal-container-open" -->
+    <!-- Для открытия модального окна добавить класс "modal-open" -->
     <div class="modal-container">
       <div class="modal modal-feedback">
         <button class="modal-close-button" type="button">
