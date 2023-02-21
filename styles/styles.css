@@ -578,7 +578,6 @@ img {
   background-color: transparent;
   color: var(--extra-dark);
   border: none;
-
   padding: 0;
   cursor: pointer;
   background-image: url("../images/icons/close.svg");
