@@ -220,26 +220,29 @@ img {
 
 .button:hover {
   background-color: rgb(252 252 252 / 0.4);
-  outline: 4px solid var(--extra-light);
-  box-shadow: 0 4px 15px rgb(133 133 133 / 0.15);
+  /* outline: 4px solid var(--extra-light); */
+  box-shadow: 0 0 0 4px var(--extra-light), 0 4px 15px rgb(133 133 133 / 0.15);
 }
 
 .button:active {
   background-color: var(--extra-light);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  /* outline: 2px solid var(--extra-dark); */
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button:focus-visible {
   background-color: rgb(252 252 252 / 0.5);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  /* outline: 2px solid var(--extra-dark); */
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
+  outline: none;
 }
 
 .button:disabled {
   color: var(--neutral);
   background-color: var(--light);
-  outline: 4px solid rgb(252 252 252 / 0.4);
+  box-shadow: 0 0 0 4px rgb(252 252 252 / 0.4);
+  outline: none;
+  /* outline: 4px solid rgb(252 252 252 / 0.4); */
 }
 
 /* Чтобы добавить спиннер кнопке - добавьте ей класс spinning */
