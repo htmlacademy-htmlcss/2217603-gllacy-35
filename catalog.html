@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>Глейси: каталог товаров.</title>
@@ -8,10 +7,8 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-
   <body class="main-body page-background-pink">
     <div class="container">
-
       <header class="main-header">
         <a class="navigation-logo" href="index.html">
           <svg class="navigation-logo-img" role="img" aria-label="Логотип сайта Глейси." width="137" height="56"
@@ -186,7 +183,8 @@
                   <ul class="basket-item-list">
                     <li class="basket-item">
                       <a class="basket-item-link" href="#">
-                        <img class="basket-item-image" src="images/catalog/raspberry.png" width="46" height="46" alt="Шарик малинового мороженого">
+                        <img class="basket-item-image" src="images/catalog/raspberry.png" width="46" height="46"
+                          alt="Шарик малинового мороженого">
                         <div class="basket-item-wrapper">
                           <h3 class="basket-item-title headline-5">Малинка</h3>
                           <p class="basket-item-amount caption">
@@ -202,7 +200,8 @@
                     </li>
                     <li class="basket-item">
                       <a class="basket-item-link" href="#">
-                        <img class="basket-item-image" src="images/catalog/bubble-gum.png" width="46" height="46" alt="Шарик мороженого со вкусом жвачки">
+                        <img class="basket-item-image" src="images/catalog/bubble-gum.png" width="46" height="46"
+                          alt="Шарик мороженого со вкусом жвачки">
                         <div class="basket-item-wrapper">
                           <h3 class="basket-item-title headline-5">Бабл-гам</h3>
                           <p class="basket-item-amount caption">
@@ -229,9 +228,7 @@
           </ul>
         </nav>
       </header>
-
       <main class="main-catalog main-container">
-
         <header class="inner-header">
           <ul class="breadcrumbs-list">
             <!-- Чтобы сделать элемент хлебных крошек выбранным - добавьте li класс "is-current" -->
@@ -246,11 +243,9 @@
             </li>
           </ul>
           <h1 class="catalog-main-title headline-2">Сливочное мороженое</h1>
-
           <section class="catalog-filter-block">
             <h2 class="visually-hidden">Фильтры каталога.</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-
               <fieldset class="catalog-filter-group">
                 <legend class="filter-group-title caption">Сортировка:</legend>
                 <div class="select sorting-type">
@@ -261,9 +256,9 @@
                   </select>
                 </div>
               </fieldset>
-
               <fieldset class="catalog-filter-group">
-                  <legend class="filter-group-title caption">Цена:
+                <div class="range-legend-wrapper caption">
+                  <legend class="filter-group-title">Цена:</legend>
                   <span class="range-wrapper-inputs">
                     <label class="catalog-filter-label min-price-label">
                       <input class="range-input" type="number" value="100" name="min-price">
@@ -275,8 +270,7 @@
                       <span class="price-label-text">₽</span>
                     </label>
                   </span>
-                </legend>
-
+                </div>
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar" style="left: 40px; width: 56px">
@@ -290,7 +284,6 @@
                   </div>
                 </div>
               </fieldset>
-
               <fieldset class="catalog-filter-group">
                 <legend class="filter-group-title caption">Жирность:</legend>
                 <ul class="catalog-filter-list caption">
@@ -327,7 +320,6 @@
                   </li>
                 </ul>
               </fieldset>
-
               <fieldset class="catalog-filter-group">
                 <legend class="filter-group-title caption">Наполнители:</legend>
                 <ul class="catalog-filter-list caption fillers-list">
@@ -404,16 +396,12 @@
                   </li>
                 </ul>
               </fieldset>
-
               <button class="button button-reverse button-filter" type="submit">Применить</button>
             </form>
           </section>
-
         </header>
-
         <section class="catalog-products">
           <h2 class="visually-hidden">Список товаров каталога.</h2>
-
           <ul class="product-list">
             <li class="product-card">
               <div class="product-card-image-wrapper">
@@ -615,7 +603,7 @@
             </li>
             <li class="product-card">
               <div class="product-card-image-wrapper">
-                <img class="product-card-image" src="./images/catalog/Ментол.png" width="168" height="168"
+                <img class="product-card-image" src="./images/catalog/menthol.png" width="168" height="168"
                   alt="Шарик мятного мороженого">
               </div>
               <div class="product-card-content">
@@ -680,53 +668,48 @@
               </div>
             </li>
           </ul>
-
         </section>
-
-          <section class="catalog-products-footer">
-            <h2 class="visually-hidden">Управление каталогом продуктов.</h2>
-            <button class="button button-more" type="button">Показать еще</button>
-
-            <div class="pagination-container">
-              <a class="pagination-disabled pagination-prev" title="Вы уже на 1 странице">
-                <svg class="pagination-button-icon" aria-hidden="true" focusable="false" width="16" height="16"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.86 13.14a.66.66 0 0 0 .95-.95L5.6 8l4.2-4.2a.67.67 0 0 0-.95-.94L4.2 7.52a.66.66 0 0 0 0 .94l4.66 4.68Z"
-                    fill="currentColor" />
-                </svg>
-              </a>
-              <ul class="pagination paragraph-3">
-                <li class="pagination-item">
-                  <span class="pagination-link pagination-current" title="Вы сейчас здесь">1</span>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">2</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">4</a>
-                </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">5</a>
-                </li>
-              </ul>
-              <a class="pagination-button pagination-next" href="#">
-                <svg class="pagination-button-icon" aria-hidden="true" focusable="false" width="16" height="16"
-                  fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"
-                    fill="currentColor" />
-                </svg>
-              </a>
-            </div>
-          </section>
+        <section class="catalog-products-footer">
+          <h2 class="visually-hidden">Управление каталогом продуктов.</h2>
+          <button class="button button-more" type="button">Показать еще</button>
+          <div class="pagination-container">
+            <a class="pagination-disabled pagination-prev" title="Вы уже на 1 странице">
+              <svg class="pagination-button-icon" aria-hidden="true" focusable="false" width="16" height="16"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.86 13.14a.66.66 0 0 0 .95-.95L5.6 8l4.2-4.2a.67.67 0 0 0-.95-.94L4.2 7.52a.66.66 0 0 0 0 .94l4.66 4.68Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+            <ul class="pagination paragraph-3">
+              <li class="pagination-item">
+                <span class="pagination-link pagination-current" title="Вы сейчас здесь">1</span>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">5</a>
+              </li>
+            </ul>
+            <a class="pagination-button pagination-next" href="#">
+              <svg class="pagination-button-icon" aria-hidden="true" focusable="false" width="16" height="16"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </section>
       </main>
-
       <footer class="main-footer inner-footer">
-
         <section class="footer-social">
           <h2 class="visually-hidden">Мы в соцсетях.</h2>
           <ul class="social-list">
@@ -765,7 +748,6 @@
             </li>
           </ul>
         </section>
-
         <section class="footer-menu">
           <h2 class="visually-hidden">Важная информация.</h2>
           <ul class="footer-menu-list">
@@ -783,7 +765,6 @@
             </li>
           </ul>
         </section>
-
         <section class="footer-html">
           <h2 class="visually-hidden">Разработано при поддержке HTML-academy.</h2>
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">
@@ -806,6 +787,6 @@
           </p>
         </section>
       </footer>
-
     </div>
   </body>
+</html>

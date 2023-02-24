@@ -56,7 +56,7 @@ body {
 }
 
 .main-body {
-  min-width: 50vh;
+  min-width: 30vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -212,34 +212,32 @@ img {
   text-decoration: none;
   cursor: pointer;
   background-color: var(--extra-light);
-  outline: 4px solid rgb(252 252 252 / 0.4);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  box-shadow: 0 0 0 4px rgb(252 252 252 / 0.4), 0 4px 12px rgb(45 52 64 / 0.1);
   transition: all ease-out 0.2s;
   outline-offset: 0;
 }
 
 .button:hover {
   background-color: rgb(252 252 252 / 0.4);
-  outline: 4px solid var(--extra-light);
-  box-shadow: 0 4px 15px rgb(133 133 133 / 0.15);
+  box-shadow: 0 0 0 4px var(--extra-light), 0 4px 15px rgb(133 133 133 / 0.15);
 }
 
 .button:active {
   background-color: var(--extra-light);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button:focus-visible {
   background-color: rgb(252 252 252 / 0.5);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
+  outline: none;
 }
 
 .button:disabled {
   color: var(--neutral);
   background-color: var(--light);
-  outline: 4px solid rgb(252 252 252 / 0.4);
+  box-shadow: 0 0 0 4px rgb(252 252 252 / 0.4);
+  outline: none;
 }
 
 /* Чтобы добавить спиннер кнопке - добавьте ей класс spinning */
@@ -258,46 +256,46 @@ img {
 .button-bright {
   color: var(--extra-light);
   background-color: var(--extra-bright);
-  outline: 4px solid rgb(255 47 100 / 0.3);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  box-shadow: 0 0 0 4px rgb(255 47 100 / 0.3), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button-bright:hover {
   color: var(--extra-dark);
   background-color: rgb(252 252 252 / 0.3);
-  outline: 4px solid var(--extra-bright);
+  box-shadow: 0 0 0 4px var(--extra-bright);
 }
 
 .button-bright:active {
   color: var(--extra-light);
   background-color: var(--special-light);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button-bright:focus-visible {
   color: var(--extra-light);
   background-color: var(--extra-bright);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button-bright:disabled {
   color: var(--dark);
   background-color: var(--neutral);
-  outline: 4px solid rgb(185 185 185 / 0.3);
+  box-shadow: 0 0 0 4px rgb(185 185 185 / 0.3);
 }
 
 .button-reverse {
+  font-size: 14px;
+  line-height: 20px;
   padding: 8px 32px;
   border-radius: 20px;
   background-color: rgb(252 252 252 / 0.3);
-  outline: 2px solid var(--extra-light);
+  box-shadow: 0 0 0 2px var(--extra-light);
 }
 
 .button-reverse:hover {
   background-color: var(--extra-light);
-  outline: rgb(252 252 252 / 0.3);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.3);
 }
 
 .button-reverse:active {
@@ -306,7 +304,8 @@ img {
 
 .button-reverse:focus-visible {
   background-color: rgb(252 252 252 / 0.3);
-  outline: 2px solid var(--extra-dark);
+  box-shadow: 0 0 0 2px var(--extra-dark);
+  outline: none;
 }
 
 .button-reverse:disabled {
@@ -913,17 +912,21 @@ img {
 }
 
 .slider-text-column {
-  max-width: 540px;
+  width: 100%;
+  max-width: 500px;
   padding: 136px 0 114px 70px;
   display: none;
+  margin-right: 40px;
 }
 
 .slider-list {
+  min-width: 888px;
   position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   overflow: hidden;
 }
@@ -936,7 +939,7 @@ img {
   display: flex;
   align-items: center;
   align-self: center;
-  justify-content: center;
+  justify-content: start;
   opacity: 0.4;
   width: 100px;
   height: 150px;
@@ -973,9 +976,8 @@ img {
 
 .slider-controls {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-12%, -50%);
+  top: 258px;
+  left: 542px;
   min-width: 350px;
   display: flex;
   justify-content: space-between;
@@ -1152,7 +1154,7 @@ img {
   border-radius: 50%;
   border: none;
   color: var(--extra-light);
-  outline: 2px solid rgb(252 252 252 / 0.3);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.3);
   outline-offset: 0;
   transition: all ease-out 0.2s;
 }
@@ -1173,7 +1175,7 @@ img {
 }
 
 .social-link:hover {
-  outline-color: rgb(252 252 252 / 0.5);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.5);
 }
 
 .social-link:hover::before {
@@ -1182,7 +1184,7 @@ img {
 
 .social-link:active {
   opacity: 0.5;
-  outline-color: rgb(252 252 252 / 0.5);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.5);
 }
 
 .social-link:active::before {
@@ -1191,7 +1193,8 @@ img {
 
 .social-link:focus-visible {
   background-color: var(--extra-dark);
-  outline-color: var(--extra-dark);
+  box-shadow: 0 0 0 2px var(--extra-dark);
+  outline: none;
 }
 
 /* Banner */
@@ -1209,11 +1212,14 @@ img {
 }
 
 .banner {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
   grid-column: span 1;
   padding: 36px;
   border-radius: 16px;
   background-color: var(--special-neutral);
-  background-position: top right;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 219px 268px;
 }
@@ -1241,6 +1247,8 @@ img {
 
 .banner-button {
   max-width: 300px;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 /* Popular-product */
@@ -1340,12 +1348,12 @@ img {
 }
 
 .product-card-button:hover {
-  outline: none;
+  box-shadow: none;
   border-color: var(--extra-bright);
 }
 
 .product-card-button:active {
-  outline: none;
+  box-shadow: none;
   background-color: var(--special-extra-light);
   border-color: var(--extra-bright);
 }
@@ -1356,6 +1364,7 @@ img {
 
 .product-card-button:focus-visible {
   outline: none;
+  box-shadow: none;
   border-color: var(--extra-dark);
 }
 
@@ -1455,7 +1464,7 @@ img {
   background-image: url("../images/background/blog-sherbet.png");
   background-repeat: no-repeat;
   background-size: 115%;
-  background-position: right 90% center;
+  background-position: right 90% top;
   border-radius: 16px;
 }
 
@@ -2081,7 +2090,6 @@ img {
 }
 
 .filter-group-title {
-  display: flex;
   margin-bottom: 8px;
   margin-left: 16px;
   padding: 0;
@@ -2137,8 +2145,15 @@ img {
   opacity: 0.1;
 }
 
+.range-legend-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .range-wrapper-inputs {
   display: flex;
+  margin-bottom: 8px;
+  align-items: center;
 }
 
 .range-input {
