@@ -208,12 +208,12 @@ img {
   text-align: center;
   padding: 12px 32px;
   border: none;
-  -webkit-border-radius: 26px;
   border-radius: 26px;
   text-decoration: none;
   cursor: pointer;
   background-color: var(--extra-light);
   outline: 4px solid rgb(252 252 252 / 0.4);
+  -webkit-outline-radius: 26px;
   box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
   transition: all ease-out 0.2s;
   outline-offset: 0;
