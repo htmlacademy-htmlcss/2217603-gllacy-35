@@ -1214,7 +1214,6 @@ img {
 .banner {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   grid-column: span 1;
   padding: 36px;
   border-radius: 16px;
