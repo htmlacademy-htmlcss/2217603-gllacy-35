@@ -212,7 +212,6 @@ img {
   text-decoration: none;
   cursor: pointer;
   background-color: var(--extra-light);
-  /* outline: 4px solid rgb(252 252 252 / 0.4); */
   box-shadow: 0 0 0 4px rgb(252 252 252 / 0.4), 0 4px 12px rgb(45 52 64 / 0.1);
   transition: all ease-out 0.2s;
   outline-offset: 0;
@@ -220,19 +219,16 @@ img {
 
 .button:hover {
   background-color: rgb(252 252 252 / 0.4);
-  /* outline: 4px solid var(--extra-light); */
   box-shadow: 0 0 0 4px var(--extra-light), 0 4px 15px rgb(133 133 133 / 0.15);
 }
 
 .button:active {
   background-color: var(--extra-light);
-  /* outline: 2px solid var(--extra-dark); */
   box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button:focus-visible {
   background-color: rgb(252 252 252 / 0.5);
-  /* outline: 2px solid var(--extra-dark); */
   box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
   outline: none;
 }
@@ -242,7 +238,6 @@ img {
   background-color: var(--light);
   box-shadow: 0 0 0 4px rgb(252 252 252 / 0.4);
   outline: none;
-  /* outline: 4px solid rgb(252 252 252 / 0.4); */
 }
 
 /* Чтобы добавить спиннер кнопке - добавьте ей класс spinning */
@@ -261,46 +256,45 @@ img {
 .button-bright {
   color: var(--extra-light);
   background-color: var(--extra-bright);
-  outline: 4px solid rgb(255 47 100 / 0.3);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  /* outline: 4px solid rgb(255 47 100 / 0.3); */
+  box-shadow: 0 0 0 4px rgb(255 47 100 / 0.3), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button-bright:hover {
   color: var(--extra-dark);
   background-color: rgb(252 252 252 / 0.3);
-  outline: 4px solid var(--extra-bright);
+  box-shadow: 0 0 0 4px var(--extra-bright);
 }
 
 .button-bright:active {
   color: var(--extra-light);
   background-color: var(--special-light);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button-bright:focus-visible {
   color: var(--extra-light);
   background-color: var(--extra-bright);
-  outline: 2px solid var(--extra-dark);
-  box-shadow: 0 4px 12px rgb(45 52 64 / 0.1);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--extra-dark), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
 .button-bright:disabled {
   color: var(--dark);
   background-color: var(--neutral);
-  outline: 4px solid rgb(185 185 185 / 0.3);
+  box-shadow: 0 0 0 4px rgb(185 185 185 / 0.3);
 }
 
 .button-reverse {
   padding: 8px 32px;
   border-radius: 20px;
   background-color: rgb(252 252 252 / 0.3);
-  outline: 2px solid var(--extra-light);
+  box-shadow: 0 0 0 2px var(--extra-light);
 }
 
 .button-reverse:hover {
   background-color: var(--extra-light);
-  outline: rgb(252 252 252 / 0.3);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.3);
 }
 
 .button-reverse:active {
@@ -309,7 +303,8 @@ img {
 
 .button-reverse:focus-visible {
   background-color: rgb(252 252 252 / 0.3);
-  outline: 2px solid var(--extra-dark);
+  box-shadow: 0 0 0 2px var(--extra-dark);
+  outline: none;
 }
 
 .button-reverse:disabled {
@@ -1155,7 +1150,7 @@ img {
   border-radius: 50%;
   border: none;
   color: var(--extra-light);
-  outline: 2px solid rgb(252 252 252 / 0.3);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.3);
   outline-offset: 0;
   transition: all ease-out 0.2s;
 }
@@ -1176,7 +1171,7 @@ img {
 }
 
 .social-link:hover {
-  outline-color: rgb(252 252 252 / 0.5);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.5);
 }
 
 .social-link:hover::before {
@@ -1185,7 +1180,7 @@ img {
 
 .social-link:active {
   opacity: 0.5;
-  outline-color: rgb(252 252 252 / 0.5);
+  box-shadow: 0 0 0 2px rgb(252 252 252 / 0.5);
 }
 
 .social-link:active::before {
@@ -1194,7 +1189,8 @@ img {
 
 .social-link:focus-visible {
   background-color: var(--extra-dark);
-  outline-color: var(--extra-dark);
+  box-shadow: 0 0 0 2px var(--extra-dark);
+  outline: none;
 }
 
 /* Banner */
@@ -1343,12 +1339,12 @@ img {
 }
 
 .product-card-button:hover {
-  outline: none;
+  box-shadow: none;
   border-color: var(--extra-bright);
 }
 
 .product-card-button:active {
-  outline: none;
+  box-shadow: none;
   background-color: var(--special-extra-light);
   border-color: var(--extra-bright);
 }
@@ -1359,6 +1355,7 @@ img {
 
 .product-card-button:focus-visible {
   outline: none;
+  box-shadow: none;
   border-color: var(--extra-dark);
 }
 
@@ -2085,6 +2082,7 @@ img {
 
 .filter-group-title {
   display: flex;
+  max-width: 190px;
   margin-bottom: 8px;
   margin-left: 16px;
   padding: 0;
