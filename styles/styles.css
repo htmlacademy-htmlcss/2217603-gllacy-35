@@ -56,7 +56,7 @@ body {
 }
 
 .main-body {
-  min-width: 50vh;
+  min-width: 30vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -256,7 +256,6 @@ img {
 .button-bright {
   color: var(--extra-light);
   background-color: var(--extra-bright);
-  /* outline: 4px solid rgb(255 47 100 / 0.3); */
   box-shadow: 0 0 0 4px rgb(255 47 100 / 0.3), 0 4px 12px rgb(45 52 64 / 0.1);
 }
 
@@ -286,6 +285,8 @@ img {
 }
 
 .button-reverse {
+  font-size: 14px;
+  line-height: 20px;
   padding: 8px 32px;
   border-radius: 20px;
   background-color: rgb(252 252 252 / 0.3);
@@ -911,17 +912,21 @@ img {
 }
 
 .slider-text-column {
-  max-width: 540px;
+  width: 100%;
+  max-width: 500px;
   padding: 136px 0 114px 70px;
   display: none;
+  margin-right: 40px;
 }
 
 .slider-list {
+  min-width: 888px;
   position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   overflow: hidden;
 }
@@ -934,7 +939,7 @@ img {
   display: flex;
   align-items: center;
   align-self: center;
-  justify-content: center;
+  justify-content: start;
   opacity: 0.4;
   width: 100px;
   height: 150px;
@@ -971,9 +976,8 @@ img {
 
 .slider-controls {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-12%, -50%);
+  top: 258px;
+  left: 542px;
   min-width: 350px;
   display: flex;
   justify-content: space-between;
@@ -1208,11 +1212,14 @@ img {
 }
 
 .banner {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
   grid-column: span 1;
   padding: 36px;
   border-radius: 16px;
   background-color: var(--special-neutral);
-  background-position: top right;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 219px 268px;
 }
@@ -1240,6 +1247,8 @@ img {
 
 .banner-button {
   max-width: 300px;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 /* Popular-product */
@@ -1455,7 +1464,7 @@ img {
   background-image: url("../images/background/blog-sherbet.png");
   background-repeat: no-repeat;
   background-size: 115%;
-  background-position: right 90% center;
+  background-position: right 90% top;
   border-radius: 16px;
 }
 
@@ -2138,10 +2147,13 @@ img {
 
 .range-legend-wrapper {
   display: flex;
+  align-items: center;
 }
 
 .range-wrapper-inputs {
   display: flex;
+  margin-bottom: 8px;
+  align-items: center;
 }
 
 .range-input {
