@@ -2081,9 +2081,6 @@ img {
 }
 
 .filter-group-title {
-  display: flex;
-  flex-wrap: nowrap;
-  max-width: 190px;
   margin-bottom: 8px;
   margin-left: 16px;
   padding: 0;
@@ -2139,11 +2136,12 @@ img {
   opacity: 0.1;
 }
 
+.range-legend-wrapper {
+  display: flex;
+}
+
 .range-wrapper-inputs {
   display: flex;
-  flex-wrap: nowrap;
-  max-width: 120px;
-  color: white;
 }
 
 .range-input {
