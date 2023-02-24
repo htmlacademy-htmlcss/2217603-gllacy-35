@@ -2082,6 +2082,7 @@ img {
 
 .filter-group-title {
   display: flex;
+  flex-wrap: nowrap;
   max-width: 190px;
   margin-bottom: 8px;
   margin-left: 16px;
@@ -2140,6 +2141,9 @@ img {
 
 .range-wrapper-inputs {
   display: flex;
+  flex-wrap: nowrap;
+  max-width: 120px;
+  color: white;
 }
 
 .range-input {
